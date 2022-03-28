@@ -7,7 +7,7 @@
 
 ## Usage
 
-`-u`: Unpack the RSCE file to the specified directory.
+`-u`: Unpack the specified RSCE file.
 
 e.g. `./rsce_tool -u ./boot-second`
 
