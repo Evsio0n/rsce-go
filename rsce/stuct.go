@@ -7,8 +7,8 @@
  */
 
 // Package rsce aka Rockchip resources image.
-//It's a binary file which contains device tree blob and additional resources
-//(like vendor splash screen) and appears as boot.img-second on unpacking.
+// It's a binary file which contains device tree blob and additional resources
+// (like vendor splash screen) and appears as boot.img-second on unpacking.
 package rsce
 
 import (
@@ -49,11 +49,13 @@ type fileEntry struct {
 	FileSize      uint32
 }
 
-func removeZeroByte(src []byte) []byte {
+func endAtFirstZeroByte(src []byte) []byte {
 	var strBuf []byte
 	for _, v := range src {
 		if v != 0 {
 			strBuf = append(strBuf, v)
+		} else {
+			break
 		}
 	}
 	return strBuf

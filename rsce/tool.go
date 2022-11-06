@@ -10,11 +10,12 @@ package rsce
 
 import (
 	"encoding/binary"
-	"github.com/evsio0n/log"
 	"io/ioutil"
 	"math"
 	"os"
 	"path"
+
+	"github.com/evsio0n/log"
 )
 
 func UnPackRSCE(filepath string) {
@@ -53,7 +54,7 @@ func UnPackRSCE(filepath string) {
 		//Parse file name
 		//File name is 256 bytes and remove null bytes
 		strWithZeroByte := fileEntryBuffer[i*512+4 : i*512+260]
-		fileName := string(removeZeroByte(strWithZeroByte))
+		fileName := string(endAtFirstZeroByte(strWithZeroByte))
 
 		log.Info("Found File, name:", fileName)
 		//Parse file offset
