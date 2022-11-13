@@ -9,10 +9,10 @@
 package main
 
 import (
+	"RSCEUtil"
 	"github.com/evsio0n/log"
 	"github.com/urfave/cli"
 	"os"
-	"rsce"
 	"sort"
 )
 
@@ -53,10 +53,10 @@ func main() {
 func Handle(c *cli.Context) {
 
 	if c.String("unpack") != "" {
-		rsce.UnPackRSCE(c.String("unpack"))
+		RSCEUtil.UnPackRSCE(c.String("unpack"))
 	}
 
 	if len(c.StringSlice("pack")) > 0 {
-		rsce.GenerateRSCE(c.StringSlice("pack"), "./boot-second")
+		RSCEUtil.GenerateRSCE(c.StringSlice("pack"), "./boot-second")
 	}
 }

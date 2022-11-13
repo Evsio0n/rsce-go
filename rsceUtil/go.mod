@@ -1,4 +1,4 @@
-module RSCE
+module RSCEUtil
 
 go 1.14
 

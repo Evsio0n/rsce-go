@@ -6,7 +6,7 @@
  *
  */
 
-package rsce
+package RSCEUtil
 
 import (
 	"encoding/binary"
