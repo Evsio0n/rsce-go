@@ -9,7 +9,7 @@
 package main
 
 import (
-	"github.com/Evsio0n/rsce-go/RSCEUtil"
+	"github.com/Evsio0n/rsce-go/rsceUtil"
 	"github.com/evsio0n/log"
 	"github.com/urfave/cli"
 	"os"
