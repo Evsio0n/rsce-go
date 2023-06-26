@@ -9,10 +9,10 @@
 package main
 
 import (
+	"github.com/Evsio0n/rsce-go/RSCEUtil"
 	"github.com/evsio0n/log"
 	"github.com/urfave/cli"
 	"os"
-	"rsce_go/RSCEUtil"
 	"sort"
 )
 
