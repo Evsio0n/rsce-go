@@ -1,8 +1,8 @@
 /*
  *
  * @Author evsio0n
- * @Date 2022/3/27 下午3:53
- * @Email <bbq2001820@gmail.com>
+ * @Date 2024/10/31 下午5:10
+ * @Email <i@evsio0n.com>
  *
  */
 
@@ -11,12 +11,22 @@ package RSCEUtil
 import (
 	"encoding/binary"
 	"io/ioutil"
+
 	"math"
 	"os"
 	"path"
 
-	"github.com/evsio0n/log"
+	log2 "github.com/evsio0n/log"
 )
+
+var log *log2.Logger
+
+func init() {
+	log = log2.NewLogger()
+	log.SetDebug(false)
+	log.SetShowLogCategory(false)
+	log.SetShowDate(false)
+}
 
 func UnPackRSCE(filepath string) {
 	file, err := os.Open(filepath)

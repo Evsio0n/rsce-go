@@ -6,7 +6,7 @@
  *
  */
 
-// Package rsce aka Rockchip resources image.
+// Package RSCEUtil aka Rockchip resources image.
 // It's a binary file which contains device tree blob and additional resources
 // (like vendor splash screen) and appears as boot.img-second on unpacking.
 package RSCEUtil
